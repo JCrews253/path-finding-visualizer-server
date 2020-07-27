@@ -1,4 +1,4 @@
-import * as express from "express";
+import express = require("express")
 import * as cors from 'cors'
 import {inputDataI,AStarSearch,Animation} from './algorithms/astar/astar'
 import { Dijkstra } from "./algorithms/dijkstras";

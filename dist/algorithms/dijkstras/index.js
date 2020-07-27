@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindNodeDistances = exports.FindMinNode = exports.Dijkstra = void 0;
 var animationQueue;
 exports.Dijkstra = (inputData) => {
     const grid = inputData.grid;
