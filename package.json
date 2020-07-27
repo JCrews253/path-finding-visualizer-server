@@ -6,7 +6,6 @@
     "watch-ts": "tsc -w",
     "watch-node": "nodemon dist/server/js",
     "watch": "concurrently -k -p \"[{name}]\" -n \"Typescript, Node\" -c \"yello.bold, cyan.bold\" \"npm run watch-ts\" \"npm run watch-node\"",
-    "heroku-postbuild": "npm run watch",
     "start": "node .",
     "build": "tsc",
     "prestart": "npm run build"
