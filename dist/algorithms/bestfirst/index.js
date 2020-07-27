@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddSurrondingNodes = exports.ManhattanDistance = exports.HeapRemove = exports.HeapInsert = exports.Swap = exports.Heapify = exports.BestFirstSearch = void 0;
 var animationQueue = [];
 var heap = [];
 var size;

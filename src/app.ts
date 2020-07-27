@@ -1,4 +1,4 @@
-import express = require("express");
+import * as express from "express";
 import * as cors from 'cors'
 import {inputDataI,AStarSearch,Animation} from './algorithms/astar/astar'
 import { Dijkstra } from "./algorithms/dijkstras";
@@ -10,7 +10,7 @@ import * as path from 'path'
 const app = express();
 app.use(cors())
 app.use(express.json())
-app.use(express.urlencoded())
+//app.use(express.urlencoded())
 app.set("port", process.env.PORT || 5000);
 
 if(process.env.NODE_ENV === 'production'){
@@ -42,6 +42,14 @@ app.post('/solutions', (req,res) => {
   else if(inputData.algorithm === 'breadth-first') animations = BreadthFirstSearch(inputData)
 
   res.send(JSON.stringify(animations))
-  })
+})
+
+app.listen(app.get("port"), () => {
+  console.log(
+    "App is running on http://localhost:%d in %s mode",
+    app.get("port"),
+    app.get("env")
+  );
+});
 
 export default app;

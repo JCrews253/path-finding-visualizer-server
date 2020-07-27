@@ -11,7 +11,7 @@ const path = require("path");
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded());
+//app.use(express.urlencoded())
 app.set("port", process.env.PORT || 5000);
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
@@ -42,6 +42,9 @@ app.post('/solutions', (req, res) => {
     else if (inputData.algorithm === 'breadth-first')
         animations = breadthfirst_1.BreadthFirstSearch(inputData);
     res.send(JSON.stringify(animations));
+});
+app.listen(app.get("port"), () => {
+    console.log("App is running on http://localhost:%d in %s mode", app.get("port"), app.get("env"));
 });
 exports.default = app;
 //# sourceMappingURL=app.js.map
