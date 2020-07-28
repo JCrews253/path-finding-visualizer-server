@@ -17,7 +17,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc" : "tsc",
-    "start": "npm run tsc"
+    "start": "npm run tsc",
+    "heroku-postbuild": "node dist/app.js"
   },
   "repository": {
     "type": "git",
