@@ -7,6 +7,7 @@ import { BreadthFirstSearch } from "./algorithms/breadthfirst";
 import { DepthFirstSearch } from "./algorithms/depthfirst";
 import * as path from 'path'
 
+
 const app = express();
 app.use(cors())
 app.use(express.json())
@@ -15,9 +16,9 @@ app.set("port", process.env.PORT || 5000);
 
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('../dist'))
-  app.get('*', (req,res) => {
-    res.sendfile(path.join(__dirname,'client','build','index.html'))
-  })
+  //app.get('*', (req,res) => {
+  // res.sendfile(path.join(__dirname,'client','build','index.html'))
+  //})
 }
 
 
